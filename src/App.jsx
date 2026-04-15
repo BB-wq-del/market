@@ -17,6 +17,7 @@ import OrderDetails from './pages/OrderDetails';
 import Wishlist from './pages/Wishlist';
 import Returns from './pages/Returns';
 import Chat from './pages/Chat';
+import SellPage from './pages/SellPage';
 
 function App() {
   return (
@@ -68,6 +69,11 @@ function App() {
               <Route path="/chat/:userId?" element={
                 <PrivateRoute>
                   <Chat />
+                </PrivateRoute>
+              } />
+              <Route path="/sell" element={
+                <PrivateRoute>
+                  <SellPage />
                 </PrivateRoute>
               } />
             </Routes>
